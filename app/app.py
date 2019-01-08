@@ -51,3 +51,8 @@ def submit_order():
 
         # Otherwise, we've successfully submitted the order; Huzzah.
         return render_template('submitted-success.html')
+
+
+@app.route('/search')
+def search():
+	return "Hello World, search param is: %s" % request.args.get('search')
